@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
@@ -7,12 +7,11 @@ using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 using System.Text;
 using System.Text.Json.Serialization;
+using VNPAY.NET;
 using WorkSpace.Data;
 using WorkSpace.Model;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 // Add services to the container.
 builder.Services.AddControllers()
@@ -43,6 +42,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 }).AddEntityFrameworkStores<AppDbContext>();
 
 // Dependency Injection
+builder.Services.AddSingleton<IVnpay, Vnpay>();
 
 // JWT Authentication
 builder.Services.AddAuthentication(options =>
@@ -74,8 +74,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseRouting();
 
+// CORS policy
+app.UseCors(builder =>
+{
+    builder.AllowAnyMethod()
+           .AllowAnyHeader()
+           .AllowCredentials()
+           .SetIsOriginAllowed(origin => true);
+});
+
+app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
