@@ -1,0 +1,32 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WorkSpace.Model
+{
+    public class Promotion
+    {
+        public int Id { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string Code { get; set; }
+
+        [MaxLength(255)]
+        public string Description { get; set; }
+
+        public decimal DiscountValue { get; set; }
+        public string DiscountType { get; set; } // Percentage, FixedAmount
+
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+
+        public int UsageLimit { get; set; } = 0; // 0 = unlimited
+        public int UsedCount { get; set; } = 0;
+
+        public bool IsActive { get; set; } = true;
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        // Navigation properties
+        public virtual ICollection<PromotionUsage> PromotionUsages { get; set; }
+    }
+}
