@@ -16,6 +16,6 @@ namespace WorkSpace.Model
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties
-        public virtual Workspace Workspace { get; set; }
+        public virtual WorkSpaces Workspace { get; set; }
     }
 }

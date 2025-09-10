@@ -8,7 +8,7 @@
         public bool IsAvailable { get; set; } = true;
 
         // Navigation properties
-        public virtual Workspace Workspace { get; set; }
+        public virtual WorkSpaces Workspace { get; set; }
         public virtual Amenity Amenity { get; set; }
     }
 }

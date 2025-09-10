@@ -2,7 +2,7 @@
 
 namespace WorkSpace.Model
 {
-    public class Workspace
+    public class WorkSpaces
     {
         public int Id { get; set; }
 

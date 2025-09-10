@@ -300,3 +300,4 @@ D:\DoAn\WorkSpace\WorkSpace\obj\Debug\net8.0\refint\WorkSpace.dll
 D:\DoAn\WorkSpace\WorkSpace\obj\Debug\net8.0\WorkSpace.pdb
 D:\DoAn\WorkSpace\WorkSpace\obj\Debug\net8.0\WorkSpace.genruntimeconfig.cache
 D:\DoAn\WorkSpace\WorkSpace\obj\Debug\net8.0\ref\WorkSpace.dll
+D:\DoAn\WorkSpace\WorkSpace\obj\Debug\net8.0\WorkSpace.sourcelink.json

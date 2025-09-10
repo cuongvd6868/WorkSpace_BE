@@ -10,7 +10,7 @@ namespace WorkSpace.Data
         {
         }
 
-        public DbSet<Workspace> Workspaces { get; set; }
+        public DbSet<WorkSpaces> Workspaces { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<HostProfile> HostProfiles { get; set; }
         public DbSet<Review> Reviews { get; set; }

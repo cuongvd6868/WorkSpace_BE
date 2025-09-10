@@ -29,6 +29,6 @@ namespace WorkSpace.Model
 
         // Navigation properties
         public virtual AppUser User { get; set; }
-        public virtual ICollection<Workspace> Workspaces { get; set; }
+        public virtual ICollection<WorkSpaces> Workspaces { get; set; }
     }
 }

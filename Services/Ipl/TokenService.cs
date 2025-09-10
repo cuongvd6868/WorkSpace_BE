@@ -29,7 +29,7 @@ namespace WorkSpace.Services.Ipl
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(7), // Đổi thành 7 ngày nếu cần
+                Expires = DateTime.Now.AddDays(7), 
                 SigningCredentials = creds,
                 Issuer = _config["JWT:Issuer"],
                 Audience = _config["JWT:Audience"]

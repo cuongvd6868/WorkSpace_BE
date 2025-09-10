@@ -27,6 +27,6 @@ namespace WorkSpace.Model
         public double Longitude { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Workspace> Workspaces { get; set; }
+        public virtual ICollection<WorkSpaces> Workspaces { get; set; }
     }
 }

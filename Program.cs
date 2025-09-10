@@ -10,6 +10,10 @@ using System.Text.Json.Serialization;
 using VNPAY.NET;
 using WorkSpace.Data;
 using WorkSpace.Model;
+using WorkSpace.Repositories;
+using WorkSpace.Repositories.Ipl;
+using WorkSpace.Services;
+using WorkSpace.Services.Ipl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +45,9 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 
 // Dependency Injection
 builder.Services.AddSingleton<IVnpay, Vnpay>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<ISendMailService, SendMailService>();
+builder.Services.AddScoped<IWorkSpacesRepository, WorkSpacesRepository>();
 
 // JWT Authentication
 builder.Services.AddAuthentication(options =>

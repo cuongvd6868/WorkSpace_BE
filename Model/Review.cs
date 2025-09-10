@@ -24,6 +24,6 @@ namespace WorkSpace.Model
         // Navigation properties
         public virtual Booking Booking { get; set; }
         public virtual AppUser User { get; set; }
-        public virtual Workspace Workspace { get; set; }
+        public virtual WorkSpaces Workspace { get; set; }
     }
 }

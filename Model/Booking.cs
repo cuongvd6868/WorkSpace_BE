@@ -42,7 +42,7 @@ namespace WorkSpace.Model
 
         // Navigation properties
         public virtual AppUser Customer { get; set; }
-        public virtual Workspace Workspace { get; set; }
+        public virtual WorkSpaces Workspace { get; set; }
         public virtual BookingStatus BookingStatus { get; set; }
         public virtual Payment Payment { get; set; }
         public virtual ICollection<BookingParticipant> BookingParticipants { get; set; }
