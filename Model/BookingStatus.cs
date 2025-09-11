@@ -14,6 +14,6 @@ namespace WorkSpace.Model
         public string Description { get; set; }
 
         // Navigation properties
-        public virtual ICollection<Booking> Bookings { get; set; }
+        public virtual List<Booking> Bookings { get; set; }
     }
 }

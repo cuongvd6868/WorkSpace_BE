@@ -17,6 +17,6 @@ namespace WorkSpace.Model
         public string IconClass { get; set; } // For UI
 
         // Navigation properties
-        public virtual ICollection<WorkspaceAmenity> WorkspaceAmenities { get; set; }
+        public virtual List<WorkspaceAmenity> WorkspaceAmenities { get; set; }
     }
 }

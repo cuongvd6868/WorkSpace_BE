@@ -27,6 +27,6 @@ namespace WorkSpace.Model
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties
-        public virtual ICollection<PromotionUsage> PromotionUsages { get; set; }
+        public virtual List<PromotionUsage> PromotionUsages { get; set; }
     }
 }

@@ -100,6 +100,6 @@ app.Run();
 static IEdmModel GetEdmModel()
 {
     var builder = new ODataConventionModelBuilder();
-    //builder.EntitySet<Category>("Categories");
+    builder.EntitySet<WorkSpaces>("WorkSpaceOdata");
     return builder.GetEdmModel();
 }

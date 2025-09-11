@@ -34,16 +34,16 @@ namespace WorkSpace.Model
 
         // Navigation properties
         public virtual WorkspaceType WorkspaceType { get; set; }
-        public virtual ICollection<WorkspaceImage> WorkspaceImages { get; set; }
-        public virtual ICollection<WorkspaceAmenity> WorkspaceAmenities { get; set; }
+        public virtual List<WorkspaceImage> WorkspaceImages { get; set; }
+        public virtual List<WorkspaceAmenity> WorkspaceAmenities { get; set; }
         public virtual Address Address { get; set; }
-        public virtual ICollection<Booking> Bookings { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual List<Booking> Bookings { get; set; }
+        public virtual List<Review> Reviews { get; set; }
 
         public virtual HostProfile Host { get; set; }
-        public virtual ICollection<AvailabilitySchedule> AvailabilitySchedules { get; set; }
-        public virtual ICollection<BlockedTimeSlot> BlockedTimeSlots { get; set; }
-        public virtual ICollection<WorkSpaceFavorite> WorkSpaceFavorites { get; set; }
+        public virtual List<AvailabilitySchedule> AvailabilitySchedules { get; set; }
+        public virtual List<BlockedTimeSlot> BlockedTimeSlots { get; set; }
+        public virtual List<WorkSpaceFavorite> WorkSpaceFavorites { get; set; }
 
     }
 }

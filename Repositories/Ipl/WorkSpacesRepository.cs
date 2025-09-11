@@ -53,9 +53,27 @@ namespace WorkSpace.Repositories.Ipl
                 .ToListAsync();
         }
 
-        public Task UpdateWorkSpaceAsync(int id, WorkSpaces workspace)
+        public async Task UpdateWorkSpaceAsync(int id, WorkSpaces workspace)
         {
-            throw new NotImplementedException();
+            var existingWorkspace = await _context.Workspaces.FindAsync(id);
+            if (existingWorkspace == null)
+            {
+                throw new Exception("WorkSpace not found");
+            }
+            existingWorkspace.Title = workspace.Title;
+            existingWorkspace.Description = workspace.Description;
+            existingWorkspace.AddressId = workspace.AddressId;
+            existingWorkspace.WorkspaceTypeId = workspace.WorkspaceTypeId;
+            existingWorkspace.PricePerHour = workspace.PricePerHour;
+            existingWorkspace.PricePerDay = workspace.PricePerDay;
+            existingWorkspace.PricePerMonth = workspace.PricePerMonth;
+            existingWorkspace.Capacity = workspace.Capacity;
+            existingWorkspace.Area = workspace.Area;
+            existingWorkspace.IsActive = workspace.IsActive;
+            existingWorkspace.IsVerified = workspace.IsVerified;
+            existingWorkspace.UpdatedAt = DateTime.UtcNow;
+            _context.Workspaces.Update(existingWorkspace);
+            await _context.SaveChangesAsync();
         }
     }
 }

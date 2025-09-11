@@ -45,8 +45,8 @@ namespace WorkSpace.Model
         public virtual WorkSpaces Workspace { get; set; }
         public virtual BookingStatus BookingStatus { get; set; }
         public virtual Payment Payment { get; set; }
-        public virtual ICollection<BookingParticipant> BookingParticipants { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
-        public virtual ICollection<PromotionUsage> PromotionUsages { get; set; }
+        public virtual List<BookingParticipant> BookingParticipants { get; set; }
+        public virtual List<Review> Reviews { get; set; }
+        public virtual List<PromotionUsage> PromotionUsages { get; set; }
     }
 }
