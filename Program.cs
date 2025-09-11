@@ -48,6 +48,7 @@ builder.Services.AddSingleton<IVnpay, Vnpay>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ISendMailService, SendMailService>();
 builder.Services.AddScoped<IWorkSpacesRepository, WorkSpacesRepository>();
+builder.Services.AddScoped<IWorkSpaceFavoriteRepository, WorkSpaceFavoriteRepository>();
 
 // JWT Authentication
 builder.Services.AddAuthentication(options =>
